@@ -34,7 +34,7 @@ module "ec2" {
   enable_public_ip_address = true
   user_data_install_apache = templatefile("./template/ec2_install_apache.sh", {})
 }
-/*
+
 module "lb_target_group" {
   source                   = "./load-balancer-target-group"
   lb_target_group_name     = "dev-proj-1-lb-target-group"
@@ -62,7 +62,7 @@ module "alb" {
   dev_proj_1_acm_arn        = module.aws_ceritification_manager.dev_proj_1_acm_arn
   lb_target_group_attachment_port = 5000
 }
-
+/*
 module "hosted_zone" {
   source          = "./hosted-zone"
   domain_name     = var.domain_name
